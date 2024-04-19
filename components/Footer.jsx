@@ -1,7 +1,11 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <div className="py-8 px-4 md:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-3">
@@ -20,9 +24,22 @@ const Footer = () => {
           <div className="col-span-3 md:col-span-1">
             <div className="font-semibold mx-2">Follow us</div>
             <div className="flex justify-center md:justify-start">
-              <FaInstagram className="mx-2" />
-              <FaFacebook className="mx-2" />
-              <FaLinkedin className="mx-2" />
+              <FaInstagram
+                className="mx-2 cursor-pointer"
+                onClick={() =>
+                  router.push("https://www.instagram.com/ecoyaan/")
+                }
+              />
+              <FaFacebook
+                className="mx-2 cursor-pointer"
+                onClick={() => router.push("https://www.facebook.com/Ecoyaan/")}
+              />
+              <FaLinkedin
+                className="mx-2 cursor-pointer"
+                onClick={() =>
+                  router.push("https://www.linkedin.com/company/ecoyaan/")
+                }
+              />
             </div>
           </div>
         </div>
