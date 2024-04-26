@@ -2,10 +2,12 @@ import Image from "next/image";
 import img from "@/public/comnumity.png";
 import img2 from "@/public/pr.png";
 import img3 from "@/public/buisiness.png";
+import Crousel from "@/components/Crousel";
 
 export default function Home() {
   return (
     <div className="bg-slate-100">
+      <Crousel />
       <div className="grid md:grid-cols-2 gap-4 sm:grid-cols-1 bg-slate-100 p-10 rounded-2xl">
         <div>
           <h1 className="text-green-950 text-5xl mb-4">
